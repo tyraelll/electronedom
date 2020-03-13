@@ -36,8 +36,8 @@ const helpSubmenu = [
 ${debugInfo()}`;
 
 			openNewGitHubIssue({
-				user: 'sindresorhus',
-				repo: 'electron-boilerplate',
+				user: 'tyraelll',
+				repo: 'eDominations',
 				body
 			});
 		}
@@ -51,7 +51,7 @@ if (!is.macos) {
 		},
 		aboutMenuItem({
 			icon: path.join(__dirname, 'static', 'icon.png'),
-			text: 'Created by Your Name'
+			text: 'Created by eDominations'
 		})
 	);
 }
