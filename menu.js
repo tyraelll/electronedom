@@ -18,11 +18,11 @@ const showPreferences = () => {
 const helpSubmenu = [
 	openUrlMenuItem({
 		label: 'Website',
-		url: 'https://github.com/sindresorhus/electron-boilerplate'
+		url: 'https://edominations.com'
 	}),
 	openUrlMenuItem({
 		label: 'Source Code',
-		url: 'https://github.com/sindresorhus/electron-boilerplate'
+		url: 'https://github.com/tyraelll/electronedom'
 	}),
 	{
 		label: 'Report an Issue…',
@@ -37,7 +37,7 @@ ${debugInfo()}`;
 
 			openNewGitHubIssue({
 				user: 'tyraelll',
-				repo: 'eDominations',
+				repo: 'https://github.com/tyraelll/electronedom',
 				body
 			});
 		}
