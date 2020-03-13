@@ -10,7 +10,6 @@ const config = require('./config');
 const menu = require('./menu');
 
 unhandled();
-debug();
 contextMenu();
 
 // Note: Must match `build.appId` in package.json
@@ -35,7 +34,7 @@ const createMainWindow = async () => {
 		title: app.name,
 		show: false,
 		width: 1200,
-		height: 1000
+		height: 1000,
 	});
 
 	win.on('ready-to-show', () => {
@@ -84,7 +83,4 @@ app.on('activate', async () => {
 	await app.whenReady();
 	Menu.setApplicationMenu(menu);
 	mainWindow = await createMainWindow();
-
-	const favoriteAnimal = config.get('favoriteAnimal');
-	mainWindow.webContents.executeJavaScript(`document.querySelector('header p').textContent = 'Your favorite animal is ${favoriteAnimal}'`);
 })();
