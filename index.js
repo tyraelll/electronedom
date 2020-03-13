@@ -1,12 +1,10 @@
 'use strict';
 const path = require('path');
 const {app, BrowserWindow, Menu} = require('electron');
-/// const {autoUpdater} = require('electron-updater');
+const {autoUpdater} = require('electron-updater');
 const {is} = require('electron-util');
 const unhandled = require('electron-unhandled');
-const debug = require('electron-debug');
 const contextMenu = require('electron-context-menu');
-const config = require('./config');
 const menu = require('./menu');
 
 unhandled();
@@ -34,7 +32,7 @@ const createMainWindow = async () => {
 		title: app.name,
 		show: false,
 		width: 1200,
-		height: 1000,
+		height: 1000
 	});
 
 	win.on('ready-to-show', () => {
